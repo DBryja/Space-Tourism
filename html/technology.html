@@ -7,14 +7,25 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Frontend Mentor | Space tourism website</title>
+
+    <style>
+      .technology-menu-dot {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-radius: 50%;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <header>
       <img src="../assets/shared/logo.svg" alt="logo" />
       <nav>
-        <span class="menu-dash" style="display: none"></span>
-        <img src="./assets/shared/icon-hamburger.svg" alt="" />
-        <ul>
+        <img src="../assets/shared/icon-hamburger.svg" alt="" class="burger" />
+        <span class="menu-dash desktop"></span>
+        <ul class="desktop">
           <li><span class="menu-number">00</span><a href="index.html">Home</a></li>
           <li><span class="menu-number">01</span><a href="destination.html">Destination</a></li>
           <li><span class="menu-number">02</span><a href="crew.html">Crew</a></li>
@@ -22,15 +33,24 @@
         </ul>
       </nav>
     </header>
+    <div class="menu mobile">
+      <img src="../assets/shared/icon-close.svg" alt="" class="close" />
+      <ul>
+        <li><span class="menu-number">00</span><a href="index.html">Home</a></li>
+        <li><span class="menu-number">01</span><a href="destination.html">Destination</a></li>
+        <li><span class="menu-number">02</span><a href="crew.html">Crew</a></li>
+        <li><span class="menu-number">03</span><a href="technology.html">Technology</a></li>
+      </ul>
+    </div>
 
     <main>
       <h5><span class="site-counter">03</span> Space Launch 101</h5>
 
       <section class="technology-text-content">
         <div class="technology-menu">
-          <div class="technology-menu-dot">1</div>
-          <div class="technology-menu-dot">2</div>
-          <div class="technology-menu-dot">3</div>
+          <div class="technology-menu-dot" data-technology="0">1</div>
+          <div class="technology-menu-dot" data-technology="1">2</div>
+          <div class="technology-menu-dot" data-technology="2">3</div>
         </div>
 
         <div class="description">
@@ -44,6 +64,7 @@
       <img src="" alt="" class="technology-image-landscape" />
     </main>
 
-    Explore
+    <script src="../js/main.js" type="module"></script>
+    <script src="../js/technology.js"></script>
   </body>
 </html>

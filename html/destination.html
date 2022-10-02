@@ -12,9 +12,9 @@
     <header>
       <img src="../assets/shared/logo.svg" alt="logo" />
       <nav>
-        <span class="menu-dash" style="display: none"></span>
-        <img src="./assets/shared/icon-hamburger.svg" alt="" />
-        <ul>
+        <img src="../assets/shared/icon-hamburger.svg" alt="" class="burger" />
+        <span class="menu-dash desktop"></span>
+        <ul class="desktop">
           <li><span class="menu-number">00</span><a href="index.html">Home</a></li>
           <li><span class="menu-number">01</span><a href="destination.html">Destination</a></li>
           <li><span class="menu-number">02</span><a href="crew.html">Crew</a></li>
@@ -22,6 +22,15 @@
         </ul>
       </nav>
     </header>
+    <div class="menu mobile">
+      <img src="../assets/shared/icon-close.svg" alt="" class="close" />
+      <ul>
+        <li><span class="menu-number">00</span><a href="index.html">Home</a></li>
+        <li><span class="menu-number">01</span><a href="destination.html">Destination</a></li>
+        <li><span class="menu-number">02</span><a href="crew.html">Crew</a></li>
+        <li><span class="menu-number">03</span><a href="technology.html">Technology</a></li>
+      </ul>
+    </div>
 
     <main>
       <h5><span class="site-counter">01</span> Pick your destination</h5>
@@ -30,10 +39,10 @@
       <section class="destination-text-content">
         <div class="destination-menu">
           <ul>
-            <li><h6>MOON</h6></li>
-            <li><h6>MARS</h6></li>
-            <li><h6>EUROPA</h6></li>
-            <li><h6>TITAN</h6></li>
+            <li data-planet="0"><h6>MOON</h6></li>
+            <li data-planet="1"><h6>MARS</h6></li>
+            <li data-planet="2"><h6>EUROPA</h6></li>
+            <li data-planet="3"><h6>TITAN</h6></li>
           </ul>
         </div>
         <h2 class="destination-name"></h2>
@@ -44,11 +53,13 @@
           <p class="sub1 destination-distance"></p>
         </div>
         <div class="travel">
-          <p class="sub2 destination-distance">EST. TRAVEL TIME</p>
+          <p class="sub2">EST. TRAVEL TIME</p>
+          <p class="sub1 destination-travel"></p>
         </div>
       </section>
     </main>
 
-    Explore
+    <script src="../js/main.js" type="module"></script>
+    <script src="../js/destination.js" type="module"></script>
   </body>
 </html>

@@ -7,14 +7,29 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Frontend Mentor | Space tourism website</title>
+
+    <style>
+      .crew-menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .crew-menu-dot {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: rgb(199, 39, 39);
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <header>
       <img src="../assets/shared/logo.svg" alt="logo" />
       <nav>
-        <span class="menu-dash" style="display: none"></span>
-        <img src="./assets/shared/icon-hamburger.svg" alt="" />
-        <ul>
+        <img src="../assets/shared/icon-hamburger.svg" alt="" class="burger" />
+        <span class="menu-dash desktop"></span>
+        <ul class="desktop">
           <li><span class="menu-number">00</span><a href="index.html">Home</a></li>
           <li><span class="menu-number">01</span><a href="destination.html">Destination</a></li>
           <li><span class="menu-number">02</span><a href="crew.html">Crew</a></li>
@@ -22,6 +37,15 @@
         </ul>
       </nav>
     </header>
+    <div class="menu mobile">
+      <img src="../assets/shared/icon-close.svg" alt="" class="close" />
+      <ul>
+        <li><span class="menu-number">00</span><a href="index.html">Home</a></li>
+        <li><span class="menu-number">01</span><a href="destination.html">Destination</a></li>
+        <li><span class="menu-number">02</span><a href="crew.html">Crew</a></li>
+        <li><span class="menu-number">03</span><a href="technology.html">Technology</a></li>
+      </ul>
+    </div>
 
     <main>
       <h5><span class="site-counter">02</span> Meet your crew</h5>
@@ -32,16 +56,17 @@
         <p class="crew-bio"></p>
 
         <div class="crew-menu">
-          <span class="crew-menu-dot"></span>
-          <span class="crew-menu-dot"></span>
-          <span class="crew-menu-dot"></span>
-          <span class="crew-menu-dot"></span>
+          <span data-crew="0" class="crew-menu-dot"></span>
+          <span data-crew="1" class="crew-menu-dot"></span>
+          <span data-crew="2" class="crew-menu-dot"></span>
+          <span data-crew="3" class="crew-menu-dot"></span>
         </div>
       </section>
 
       <img src="" alt="" class="crew-image" />
     </main>
 
-    Explore
+    <script src="../js/main.js" type="module"></script>
+    <script src="../js/crew.js" type="module"></script>
   </body>
 </html>

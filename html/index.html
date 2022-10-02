@@ -6,22 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/homePage.css" />
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body>
     <header>
       <img src="../assets/shared/logo.svg" alt="logo" />
       <nav>
-        <span class="menu-dash" style="display: none"></span>
-        <img src="./assets/shared/icon-hamburger.svg" alt="" />
-        <ul>
-          <li><span class="menu-number">00</span><a href="index.html">Home</a></li>
-          <li><span class="menu-number">01</span><a href="destination.html">Destination</a></li>
-          <li><span class="menu-number">02</span><a href="crew.html">Crew</a></li>
-          <li><span class="menu-number">03</span><a href="technology.html">Technology</a></li>
+        <img src="../assets/shared/icon-hamburger.svg" alt="" class="burger" />
+        <span class="menu-dash desktop"></span>
+        <ul class="desktop">
+          <li><span class="menu-number">00</span><a href="index.html" class="link.Home">Home</a></li>
+          <li>
+            <span class="menu-number">01</span><a href="destination.html" class="link.Destination">Destination</a>
+          </li>
+          <li><span class="menu-number">02</span><a href="crew.html" class="link.Crew">Crew</a></li>
+          <li><span class="menu-number">03</span><a href="technology.html" class="link.Technology">Technology</a></li>
         </ul>
       </nav>
     </header>
+    <div class="menu mobile">
+      <img src="../assets/shared/icon-close.svg" alt="" class="close" />
+      <ul>
+        <li><span class="menu-number">00</span><a href="index.html" class="linkHome">Home</a></li>
+        <li><span class="menu-number">01</span><a href="destination.html" class="linkDestination">Destination</a></li>
+        <li><span class="menu-number">02</span><a href="crew.html" class="linkCrew">Crew</a></li>
+        <li><span class="menu-number">03</span><a href="technology.html" class="linkTechnology">Technology</a></li>
+      </ul>
+    </div>
 
     <main>
       <section class="home-text-content">
@@ -32,8 +44,8 @@
           on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!
         </p>
       </section>
-      <button>Explore</button>
+      <button><h3>Explore</h3></button>
     </main>
-    <script src="./main.js" type="module"></script>
+    <script src="../js/main.js" type="module"></script>
   </body>
 </html>
