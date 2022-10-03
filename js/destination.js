@@ -7,6 +7,12 @@ destinations.forEach((item) => {
     planetID = this.dataset.planet;
     changeContent();
   });
+  item.addEventListener("click", function () {
+    destinations.forEach((item) => {
+      item.classList.remove("active");
+    });
+    this.classList.add("active");
+  });
 });
 
 function changeContent() {

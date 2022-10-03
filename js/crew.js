@@ -8,6 +8,12 @@ crewMembers.forEach((item) => {
     console.log(crewID);
     changeContent();
   });
+  item.addEventListener("click", function () {
+    crewMembers.forEach((item) => {
+      item.classList.remove("active");
+    });
+    this.classList.add("active");
+  });
 });
 
 function changeContent() {

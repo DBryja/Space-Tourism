@@ -1,5 +1,5 @@
 @import "variables.scss";
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap&family=Barlow&display=swap");
 
 html {
   font-size: 10px;
@@ -21,7 +21,6 @@ h6,
 .sub2,
 body,
 li {
-  color: $color-white;
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -30,6 +29,11 @@ li {
 }
 p {
   text-transform: none;
+  margin: 0;
+  font-weight: 400;
+}
+body {
+  font-family: "Barlow", "sans-serif";
 }
 
 h1 {
@@ -40,6 +44,7 @@ h2 {
 }
 h3 {
   font-size: 5.6rem;
+  font-weight: 400;
 }
 h4 {
   font-size: 3.2rem;

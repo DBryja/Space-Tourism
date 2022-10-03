@@ -1,4 +1,99 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap&family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap&family=Barlow&display=swap");
+html {
+  font-size: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+.sub1 {
+  color: #ffffff;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h5,
+h6,
+.sub2,
+body,
+li {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #d0d6f9;
+  margin: 0;
+}
+
+p {
+  text-transform: none;
+  margin: 0;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Barlow", "sans-serif";
+}
+
+h1 {
+  font-size: 15rem;
+}
+
+h2 {
+  font-size: 10rem;
+}
+
+h3 {
+  font-size: 5.6rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 3.2rem;
+}
+
+h5 {
+  font-size: 2.8rem;
+  letter-spacing: 0.475rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+  letter-spacing: 0.27rem;
+}
+
+.sub1 {
+  font-size: 2.8rem;
+}
+
+.sub2,
+li a {
+  font-size: 1.4rem;
+  letter-spacing: 0.235rem;
+}
+
+li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+li span {
+  font-size: 1.4rem;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  line-height: 1.4;
+  font-weight: 400;
+}
+
 html {
   font-size: 10px;
 }
@@ -233,4 +328,77 @@ header {
 }
 ul {
   padding: 0;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 6px;
+  }
+  body {
+    background-image: url(../assets/technology/background-technology-mobile.jpg);
+  }
+  main {
+    min-height: 85vh;
+    height: 100%;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main .technology-text-content {
+    padding: 0 3rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    height: 350px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .technology-text-content .technology-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+.technology-menu-dot {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+.technology-menu-dot.active {
+  color: #0b0d17;
+  background-color: #ffffff;
+}/*# sourceMappingURL=technologyPage.css.map */

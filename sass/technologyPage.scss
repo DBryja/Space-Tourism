@@ -1,0 +1,47 @@
+@import "variables.scss";
+@import "fonts.scss";
+@import "style.scss";
+
+@media (max-width: 767px) {
+  html {
+    font-size: 6px;
+  }
+  body {
+    background-image: url(../assets/technology/background-technology-mobile.jpg);
+  }
+  main {
+    min-height: 85vh;
+    height: 100%;
+    padding: 0;
+    @include flex-column;
+    justify-content: space-around;
+    .technology-text-content {
+      padding: 0 3rem;
+      order: 2;
+      height: 350px;
+      @include flex-column;
+      .technology-menu {
+        display: flex;
+        width: 50%;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
+
+.technology-menu-dot {
+  display: inline-block;
+  $technology-dot-size: 45px;
+  width: $technology-dot-size;
+  height: $technology-dot-size;
+  line-height: $technology-dot-size;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  text-align: center;
+  color: $color-white;
+  cursor: pointer;
+  &.active {
+    color: $color-dark;
+    background-color: $color-white;
+  }
+}

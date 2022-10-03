@@ -7,6 +7,12 @@ technologies.forEach((item) => {
     technologyID = this.dataset.technology;
     changeContent();
   });
+  item.addEventListener("click", function () {
+    technologies.forEach((item) => {
+      item.classList.remove("active");
+      this.classList.add("active");
+    });
+  });
 });
 
 function changeContent() {

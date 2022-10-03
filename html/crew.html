@@ -4,24 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/crewPage.css" />
     <title>Frontend Mentor | Space tourism website</title>
-
-    <style>
-      .crew-menu {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-      .crew-menu-dot {
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        background-color: rgb(199, 39, 39);
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -56,14 +42,16 @@
         <p class="crew-bio"></p>
 
         <div class="crew-menu">
-          <span data-crew="0" class="crew-menu-dot"></span>
-          <span data-crew="1" class="crew-menu-dot"></span>
-          <span data-crew="2" class="crew-menu-dot"></span>
-          <span data-crew="3" class="crew-menu-dot"></span>
+          <div data-crew="0" class="crew-menu-dot active"></div>
+          <div data-crew="1" class="crew-menu-dot"></div>
+          <div data-crew="2" class="crew-menu-dot"></div>
+          <div data-crew="3" class="crew-menu-dot"></div>
         </div>
       </section>
 
-      <img src="" alt="" class="crew-image" />
+      <div class="crew-member-image">
+        <img src="" alt="" class="crew-image" />
+      </div>
     </main>
 
     <script src="../js/main.js" type="module"></script>

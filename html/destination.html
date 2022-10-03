@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/destinationPage.css" />
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body>
@@ -39,7 +40,7 @@
       <section class="destination-text-content">
         <div class="destination-menu">
           <ul>
-            <li data-planet="0"><h6>MOON</h6></li>
+            <li data-planet="0" class="active"><h6>MOON</h6></li>
             <li data-planet="1"><h6>MARS</h6></li>
             <li data-planet="2"><h6>EUROPA</h6></li>
             <li data-planet="3"><h6>TITAN</h6></li>
@@ -48,13 +49,15 @@
         <h2 class="destination-name"></h2>
         <p class="destination-description"></p>
         <hr />
-        <div class="distance">
-          <p class="sub2">AVG. DISTANCE</p>
-          <p class="sub1 destination-distance"></p>
-        </div>
-        <div class="travel">
-          <p class="sub2">EST. TRAVEL TIME</p>
-          <p class="sub1 destination-travel"></p>
+        <div class="stats">
+          <div class="distance">
+            <p class="sub2">AVG. DISTANCE</p>
+            <p class="sub1 destination-distance"></p>
+          </div>
+          <div class="travel">
+            <p class="sub2">EST. TRAVEL TIME</p>
+            <p class="sub1 destination-travel"></p>
+          </div>
         </div>
       </section>
     </main>

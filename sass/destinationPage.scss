@@ -1,0 +1,72 @@
+@import "variables.scss";
+@import "fonts.scss";
+@import "style.scss";
+
+@media (max-width: 767px) {
+  body {
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
+  }
+  main {
+    margin-top: 0px;
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    img {
+      width: 50%;
+    }
+  }
+  h2 {
+    font-size: 9rem;
+  }
+}
+
+ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  // padding-bottom: 20px;
+  h6 {
+    font-size: 16px;
+  }
+  li {
+    cursor: pointer;
+  }
+  li.active {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: -8px;
+      width: 100%;
+      height: 3px;
+      background-color: $color-white;
+    }
+    h6 {
+      color: $color-white;
+    }
+  }
+}
+
+.sub2 {
+  font-size: 14px;
+}
+.sub1 {
+  font-size: 28px;
+}
+
+.stats {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+hr {
+  height: 1px;
+  color: $color-white;
+  opacity: 0.5;
+  border: none;
+}
