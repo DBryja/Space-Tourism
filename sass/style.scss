@@ -8,6 +8,10 @@ body {
   width: 100vw;
 }
 
+body * {
+  user-select: none;
+}
+
 img {
   max-width: 100%;
   display: block;
