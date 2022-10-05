@@ -1,3 +1,6 @@
+main {
+  margin-top: 10vh;
+}
 .home-text-content {
   display: flex;
   flex-direction: column;
@@ -5,13 +8,6 @@
   margin-bottom: 50px;
 }
 
-@media (max-width: 767px) {
-  body {
-    background-image: url(../assets/home/background-home-mobile.jpg);
-  }
-}
-@media (max-height: 670px) {
-  html {
-    font-size: 5px;
-  }
+body {
+  background-image: url(../assets/home/background-home-mobile.jpg);
 }
