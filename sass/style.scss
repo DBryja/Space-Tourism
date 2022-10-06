@@ -13,6 +13,7 @@ body {
 
 body * {
   user-select: none;
+  box-sizing: border-box;
 }
 
 img {
@@ -21,16 +22,25 @@ img {
 }
 
 header {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 3vh;
-  padding: 25px 18px;
-  img {
-    height: 150%;
+  height: 7vh;
+  position: relative;
+  padding: 10px 20px;
+  > img {
+    height: 100%;
   }
   .burger {
     cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .desktop {
+    display: none !important;
   }
 }
 
@@ -65,9 +75,7 @@ header {
     }
   }
   &::before {
-    content: "";
-    display: block;
-    position: absolute;
+    @include bef-aft;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -78,8 +86,45 @@ header {
   }
 }
 
-.desktop {
-  display: none;
+// nav {
+//   // KRESKA
+//   // &::before {
+//   //   @include before;
+//   //   left: -42vw;
+//   //   height: 2px;
+//   //   width: 45vw;
+//   //   background-color: #fff;
+//   //   opacity: 0.2;
+//   // }}
+
+nav {
+  width: 60%;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  display: flex;
+  ul.desktop {
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    .menu-number {
+      display: none;
+    }
+    li {
+      height: 100%;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      transform-origin: center;
+      @include underline;
+    }
+  }
+  &::after {
+    @include bef-aft;
+  }
 }
 
 .explore {
@@ -116,31 +161,64 @@ ul {
 hr {
   height: 1px;
   background-color: $color-white;
-  opacity: 0.5;
+  opacity: 0.2;
   border: none;
-  width: 100%;
+  width: 90%;
 }
 
-@media (max-width: 767px) {
+html {
+  font-size: 7px;
+}
+body {
+  font-size: 3rem;
+  min-height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.explore {
+  $button-size: 30rem;
+  width: $button-size;
+  height: $button-size;
+  line-height: $button-size;
+}
+main {
+  text-align: center;
+  padding: 0 4rem;
+  margin-top: 20px;
+}
+
+@media (max-height: 750px) {
   html {
-    font-size: 7px;
+    font-size: 6px;
+  }
+}
+@media (min-width: 768px) {
+  nav {
+    .burger {
+      display: none;
+    }
+    .menu-dash {
+      display: none;
+    }
+    &::after {
+      z-index: -1;
+      inset: 0;
+      backdrop-filter: blur(50px) brightness(120%);
+    }
+    .desktop {
+      display: flex !important;
+    }
   }
   body {
-    font-size: 3rem;
-    min-height: 100vh;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    font-size: 2rem;
   }
-  .explore {
-    $button-size: 30rem;
-    width: $button-size;
-    height: $button-size;
-    line-height: $button-size;
-  }
-  main {
-    text-align: center;
-    padding: 0 4rem;
+  h5 {
+    color: $color-white;
+    align-self: flex-start;
+    span {
+      opacity: 0.5;
+    }
   }
 }

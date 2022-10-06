@@ -1,7 +1,9 @@
 @import "variables.scss";
 @import "fonts.scss";
-@import "style.scss";
 
+html {
+  font-size: 7px;
+}
 body {
   background-image: url(../assets/destination/background-destination-mobile.jpg);
 }
@@ -48,6 +50,13 @@ ul {
   }
 }
 
+.stats {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .sub2 {
   font-size: 14px;
 }
@@ -55,9 +64,41 @@ ul {
   font-size: 28px;
 }
 
-.stats {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+@media (min-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  body {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+  }
+  main {
+    margin-top: 20px;
+    .destination-menu {
+      max-width: 60%;
+      margin: 0 auto;
+      h6 {
+        font-size: 2.2rem;
+      }
+    }
+    .destination-description {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    .stats {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    img {
+      width: 40%;
+    }
+    hr {
+      margin-top: 50px;
+    }
+    .sub2 {
+      font-size: 18px;
+    }
+    .sub1 {
+      font-size: 35px;
+    }
+  }
 }

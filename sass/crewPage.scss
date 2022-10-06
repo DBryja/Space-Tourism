@@ -1,6 +1,5 @@
 @import "variables.scss";
 @import "fonts.scss";
-@import "style.scss";
 
 body {
   background-image: url(../assets/crew/background-crew-mobile.jpg);
@@ -13,7 +12,7 @@ main {
   row-gap: 30px;
 }
 html {
-  font-size: 7x;
+  font-size: 7px;
 }
 
 .crew-member-image {
@@ -98,4 +97,44 @@ body::after {
   z-index: -1;
   background-color: $color-dark;
   opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  body {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex-grow: 1;
+    h5 {
+      margin-top: 30px;
+    }
+  }
+  .destination-text-content {
+    order: 1;
+    justify-content: flex-start;
+    * {
+      order: unset !important;
+    }
+    .crew-menu {
+      margin: 30px auto;
+      width: 30%;
+      .crew-menu-dot {
+        $menu-dot-size: 20px;
+        height: $menu-dot-size;
+        width: $menu-dot-size;
+      }
+    }
+  }
+  .crew-member-image {
+    &::after {
+      display: none;
+    }
+  }
 }

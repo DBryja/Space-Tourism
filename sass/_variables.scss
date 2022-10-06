@@ -8,3 +8,30 @@ $color-white: #ffffff;
   justify-content: space-evenly;
   align-items: center;
 }
+
+@mixin bef-aft {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+@mixin underline {
+  &::after {
+    @include bef-aft;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    opacity: 0.5;
+    transform: scaleX(0);
+    transition: 0.4s transform ease-in-out;
+    transform-origin: left;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
+  &.active::after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
