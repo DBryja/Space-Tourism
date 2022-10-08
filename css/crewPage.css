@@ -195,6 +195,8 @@ html {
   background-color: #ffffff;
   opacity: 0.2;
   cursor: pointer;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
 }
 .crew-menu-dot.active {
   opacity: 1;
@@ -221,7 +223,7 @@ body::after {
   inset: 0;
   z-index: -1;
   background-color: #0b0d17;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 @media (min-width: 768px) {
@@ -271,5 +273,81 @@ body::after {
   }
   .crew-member-image::after {
     display: none;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main {
+    max-width: 1600px;
+    margin: 0 auto 5vh auto;
+    width: 100vw;
+    height: 60vh;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0 8vw;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 0 5vw;
+    height: 80%;
+  }
+  main section {
+    margin-bottom: 0 !important;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    height: 100%;
+    width: 100%;
+  }
+  main h5 {
+    margin: 0;
+    position: absolute;
+    top: 0px;
+  }
+  main .destination-text-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: left;
+    position: relative;
+  }
+  main .destination-text-content .crew-menu {
+    position: absolute;
+    width: 50%;
+    bottom: 50px;
+  }
+  main .destination-text-content .crew-bio {
+    max-width: 550px;
+  }
+  main .image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  main .image .crew-member-image {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .image .crew-member-image img {
+    width: unset;
+    min-height: 80%;
   }
 }/*# sourceMappingURL=crewPage.css.map */

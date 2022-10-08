@@ -65,6 +65,11 @@ header {
     * {
       font-size: 4rem;
     }
+    li {
+      width: fit-content;
+      position: relative;
+      @include underline;
+    }
   }
   img {
     position: absolute;
@@ -85,17 +90,6 @@ header {
     transform: translateX(0);
   }
 }
-
-// nav {
-//   // KRESKA
-//   // &::before {
-//   //   @include before;
-//   //   left: -42vw;
-//   //   height: 2px;
-//   //   width: 45vw;
-//   //   background-color: #fff;
-//   //   opacity: 0.2;
-//   // }}
 
 nav {
   width: 60%;
@@ -121,6 +115,9 @@ nav {
       transform-origin: center;
       @include underline;
     }
+  }
+  &::before {
+    @include bef-aft;
   }
   &::after {
     @include bef-aft;
@@ -202,10 +199,10 @@ main {
     .menu-dash {
       display: none;
     }
-    &::after {
+    &::before {
       z-index: -1;
       inset: 0;
-      backdrop-filter: blur(50px) brightness(120%);
+      backdrop-filter: blur(50px) brightness(180%);
     }
     .desktop {
       display: flex !important;
@@ -219,6 +216,44 @@ main {
     align-self: flex-start;
     span {
       opacity: 0.5;
+    }
+  }
+  .mobile {
+    display: none !important;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  html {
+    font-size: 10px;
+  }
+  header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+  }
+  nav {
+    position: absolute;
+    width: 60vw;
+    // dash
+    &::after {
+      z-index: -1;
+      left: calc(-35vw + 30px);
+      top: calc(50% - 1px);
+      height: 2px;
+      width: 35vw;
+      background-color: #fff;
+      opacity: 0.2;
+    }
+    ul.desktop {
+      width: 55vw;
+      position: absolute;
+      .menu-number {
+        display: inline;
+      }
+      li * {
+        font-size: 2rem;
+      }
     }
   }
 }

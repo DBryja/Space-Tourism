@@ -179,6 +179,39 @@ header .desktop {
 .menu.mobile ul * {
   font-size: 4rem;
 }
+.menu.mobile ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.menu.mobile ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.5;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 0.4s -webkit-transform ease-in-out;
+  transition: 0.4s -webkit-transform ease-in-out;
+  transition: 0.4s transform ease-in-out;
+  transition: 0.4s transform ease-in-out, 0.4s -webkit-transform ease-in-out;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+.menu.mobile ul li:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.menu.mobile ul li.active::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  opacity: 1;
+}
 .menu.mobile img {
   position: absolute;
   top: 30px;
@@ -265,6 +298,11 @@ nav ul.desktop li.active::after {
           transform: scaleX(1);
   opacity: 1;
 }
+nav::before {
+  content: "";
+  display: block;
+  position: absolute;
+}
 nav::after {
   content: "";
   display: block;
@@ -348,11 +386,11 @@ main {
   nav .menu-dash {
     display: none;
   }
-  nav::after {
+  nav::before {
     z-index: -1;
     inset: 0;
-    -webkit-backdrop-filter: blur(50px) brightness(120%);
-            backdrop-filter: blur(50px) brightness(120%);
+    -webkit-backdrop-filter: blur(50px) brightness(180%);
+            backdrop-filter: blur(50px) brightness(180%);
   }
   nav .desktop {
     display: -webkit-box !important;
@@ -369,5 +407,42 @@ main {
   }
   h5 span {
     opacity: 0.5;
+  }
+  .mobile {
+    display: none !important;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  html {
+    font-size: 10px;
+  }
+  header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+  }
+  nav {
+    position: absolute;
+    width: 60vw;
+  }
+  nav::after {
+    z-index: -1;
+    left: calc(-35vw + 30px);
+    top: calc(50% - 1px);
+    height: 2px;
+    width: 35vw;
+    background-color: #fff;
+    opacity: 0.2;
+  }
+  nav ul.desktop {
+    width: 55vw;
+    position: absolute;
+  }
+  nav ul.desktop .menu-number {
+    display: inline;
+  }
+  nav ul.desktop li * {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

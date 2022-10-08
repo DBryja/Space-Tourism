@@ -1,11 +1,8 @@
 @import "variables.scss";
-@import "fonts.scss";
 
-html {
-  font-size: 6px;
-}
 body {
   background-image: url(../assets/technology/background-technology-mobile.jpg);
+  font-size: 2.2rem;
 }
 main {
   min-height: 80vh;
@@ -31,6 +28,9 @@ main {
   img {
     margin: 30px auto;
   }
+}
+.technology-image-portrait {
+  display: none;
 }
 
 .technology-menu-dot {
@@ -88,5 +88,62 @@ main {
         }
       }
     }
+  }
+}
+@media (max-height: 750px) {
+  html {
+    font-size: 7px;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  body {
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
+  }
+  main {
+    @include split-main;
+    padding-right: 0;
+    column-gap: 5vw;
+    align-items: center;
+    max-width: unset;
+    > h5 {
+      position: absolute;
+    }
+    .image {
+      flex-basis: 50%;
+      order: 2;
+      display: flex;
+      align-items: center;
+    }
+    .technology-text-content {
+      flex-direction: row;
+      height: 100%;
+      margin: 0;
+      flex-basis: 60%;
+      .technology-menu {
+        flex-direction: column;
+        margin: 0;
+        height: 50%;
+        justify-content: space-between;
+        margin-right: 80px;
+        .technology-menu-dot {
+          $technology-dot-size: 80px;
+          width: $technology-dot-size;
+          height: $technology-dot-size;
+        }
+      }
+      .description {
+        text-align: left;
+        p {
+          text-align-last: left;
+        }
+      }
+    }
+  }
+
+  .technology-image-landscape {
+    display: none;
+  }
+  .technology-image-portrait {
+    display: block;
   }
 }

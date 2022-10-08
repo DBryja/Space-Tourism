@@ -28,11 +28,29 @@ body {
     height: 80vh;
     @include flex-column;
   }
-  .mobile {
-    display: none !important;
-  }
   h5 {
     color: $color-blue;
     align-self: center;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  body {
+    background-image: url(../assets/home/background-home-desktop.jpg);
+  }
+  main {
+    @include split-main;
+
+    .explore-button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .home-text-content {
+      max-width: 550px;
+      text-align: left;
+      h5 {
+        align-self: flex-start;
+      }
+    }
   }
 }
