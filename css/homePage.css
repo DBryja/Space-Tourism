@@ -71,6 +71,7 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
     padding: 0 8vw;
+    margin: 0 auto 10vh auto;
   }
   main section {
     margin-bottom: 0 !important;

@@ -96,6 +96,9 @@ main {
   }
 }
 @media (min-width: 1024px) and (orientation: landscape) {
+  html {
+    font-size: 10px;
+  }
   body {
     background-image: url(../assets/technology/background-technology-desktop.jpg);
   }
@@ -107,32 +110,45 @@ main {
     max-width: unset;
     > h5 {
       position: absolute;
+      margin: 0;
     }
     .image {
       flex-basis: 50%;
       order: 2;
       display: flex;
       align-items: center;
+      img {
+        margin: 0;
+        max-height: 90%;
+      }
     }
     .technology-text-content {
       flex-direction: row;
       height: 100%;
       margin: 0;
       flex-basis: 60%;
+      font-size: 2.5rem;
+      justify-content: flex-start;
       .technology-menu {
         flex-direction: column;
         margin: 0;
         height: 50%;
         justify-content: space-between;
         margin-right: 80px;
+        flex-basis: 15%;
         .technology-menu-dot {
           $technology-dot-size: 80px;
           width: $technology-dot-size;
           height: $technology-dot-size;
+          transition: border-color 0.2s linear, background-color 0.2s;
+          &:hover {
+            border-color: rgba(255, 255, 255, 0.8);
+          }
         }
       }
       .description {
         text-align: left;
+        max-width: 500px;
         p {
           text-align-last: left;
         }

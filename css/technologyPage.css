@@ -142,6 +142,9 @@ main img {
   }
 }
 @media (min-width: 1024px) and (orientation: landscape) {
+  html {
+    font-size: 10px;
+  }
   body {
     background-image: url(../assets/technology/background-technology-desktop.jpg);
   }
@@ -178,6 +181,7 @@ main img {
   }
   main > h5 {
     position: absolute;
+    margin: 0;
   }
   main .image {
     -ms-flex-preferred-size: 50%;
@@ -192,6 +196,10 @@ main img {
         -ms-flex-align: center;
             align-items: center;
   }
+  main .image img {
+    margin: 0;
+    max-height: 90%;
+  }
   main .technology-text-content {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -201,6 +209,10 @@ main img {
     margin: 0;
     -ms-flex-preferred-size: 60%;
         flex-basis: 60%;
+    font-size: 2.5rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   main .technology-text-content .technology-menu {
     -webkit-box-orient: vertical;
@@ -213,13 +225,21 @@ main img {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-right: 80px;
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
   }
   main .technology-text-content .technology-menu .technology-menu-dot {
     width: 80px;
     height: 80px;
+    -webkit-transition: border-color 0.2s linear, background-color 0.2s;
+    transition: border-color 0.2s linear, background-color 0.2s;
+  }
+  main .technology-text-content .technology-menu .technology-menu-dot:hover {
+    border-color: rgba(255, 255, 255, 0.8);
   }
   main .technology-text-content .description {
     text-align: left;
+    max-width: 500px;
   }
   main .technology-text-content .description p {
     -moz-text-align-last: left;

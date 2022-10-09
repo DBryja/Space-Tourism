@@ -349,5 +349,7 @@ body::after {
   main .image .crew-member-image img {
     width: unset;
     min-height: 80%;
+    max-height: 100%;
+    max-width: 75%;
   }
 }/*# sourceMappingURL=crewPage.css.map */

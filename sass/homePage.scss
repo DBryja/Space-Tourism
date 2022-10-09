@@ -39,6 +39,7 @@ body {
   }
   main {
     @include split-main;
+    margin: 0 auto 10vh auto;
 
     .explore-button {
       display: flex;

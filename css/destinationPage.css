@@ -214,9 +214,11 @@ h2 {
   }
   main .destination-planet img {
     width: 80%;
+    margin: 0;
   }
   main .destination-text-content {
-    height: 70%;
+    height: 80%;
+    max-height: 500px;
     width: 100%;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -232,7 +234,7 @@ h2 {
     margin: 0;
     max-width: 80%;
     position: absolute;
-    top: 50px;
+    top: 0px;
   }
   main .destination-text-content .destination-menu ul {
     -webkit-box-pack: start;
