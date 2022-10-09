@@ -42,7 +42,7 @@ function changeContent() {
 
 ### Continued development
 
-Would like to animate changing content especially on the destination page.
+I would like to animate the change of content, especially on the destination page.
 
 ## Author
 
