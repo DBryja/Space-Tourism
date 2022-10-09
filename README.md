@@ -15,7 +15,7 @@ This is a solution to the [Space tourism multi-page website](https://www.fronten
 ### Links
 
 - Solution URL: [https://github.com/DBryja/Space-Tourism.git]
-- Live Site URL: [https://dbryja.github.io/Space-Tourism/]
+- Live Site URL: [https://dbryja.github.io/Space-Tourism/html/index.html]
 
 ## My process
 
